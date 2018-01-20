@@ -23,18 +23,17 @@ def check_prime(val, type=1):
 
 
 # 1つずつ回してく
-def is_prime1(val):
-    print(">>version1")
+def is_prime1(val, is_print=True):
     for i in range(2, val):
         if val % i == 0:
-            print("{}で割れました".format(i))
+            if is_print:
+                print("{}で割れました".format(i))
             return False
     return True
 
 
 # 高速化Ver
-def is_prime2(val):
-    print(">>version2")
+def is_prime2(val, is_print=True):
     if val == 2:
         return True
     if val % 2 == 0:
@@ -44,7 +43,8 @@ def is_prime2(val):
     i = 3
     while i <= sqrt:
         if val % i == 0:
-            print("{}で割れました".format(i))
+            if is_print:
+                print("{}で割れました".format(i))
             return False
         i = i + 2
     return True
