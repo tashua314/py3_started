@@ -13,13 +13,10 @@ def make_password(length, type=1):
         length = int(length)
 
         for i in range(0, length):
-            key = string.printable[random.randint(0, 99)]
-            if int(type) == 2:
-                while 1:
-                    if key in [' ', '\t', '\n', '\r', '\x0b', '\x0c']:
-                        key = string.printable[random.randint(0, 99)]
-                    else:
-                        break
+            if int(type) == 1:
+                key = string.printable[random.randint(0, 99)]
+            elif int(type) == 2:
+                key = string.printable[random.randint(0, 89)]
             result.append(key)
         print(result)
         return ''.join(result)
