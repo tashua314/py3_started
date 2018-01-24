@@ -18,7 +18,6 @@ def make_password(length, type=1):
             elif int(type) == 2:
                 key = string.printable[random.randint(0, 89)]
             result.append(key)
-        print(result)
         return ''.join(result)
 
     except ValueError:
