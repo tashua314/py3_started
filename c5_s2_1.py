@@ -8,7 +8,7 @@ def check_prime(val, type=1):
     try:
         val = int(val)
 
-        if val <= 1:
+        if val <= 1 or val == 1:
             return False
 
         if int(type) == 1:
