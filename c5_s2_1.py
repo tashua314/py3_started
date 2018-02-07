@@ -2,38 +2,35 @@
 import sys
 import math
 
+METHOD_TYPE = 1
+
 
 # 素数チェック
 def check_prime(val, type=1):
-    try:
-        val = int(val)
+    val = int(val)
 
-        if val <= 1 or val == 1:
-            return False
-
-        if int(type) == 1:
-            if is_prime1(val):
-                return True
-        elif int(type) == 2:
-            if is_prime2(val):
-                return True
+    if val <= 1 or val == 1:
         return False
-    except ValueError:
-        print("ERROR: 数値を入力してください")
+
+    if int(type) == 1:
+        if is_prime1(val):
+            return True
+    elif int(type) == 2:
+        if is_prime2(val):
+            return True
+    return False
 
 
 # 1つずつ回してく
-def is_prime1(val, is_print=True):
+def is_prime1(val):
     for i in range(2, val):
         if val % i == 0:
-            if is_print:
-                print("{}で割れました".format(i))
             return False
     return True
 
 
 # 高速化Ver
-def is_prime2(val, is_print=True):
+def is_prime2(val):
     if val == 2:
         return True
     if val % 2 == 0:
@@ -43,8 +40,6 @@ def is_prime2(val, is_print=True):
     i = 3
     while i <= sqrt:
         if val % i == 0:
-            if is_print:
-                print("{}で割れました".format(i))
             return False
         i = i + 2
     return True
@@ -52,9 +47,15 @@ def is_prime2(val, is_print=True):
 
 if __name__ == '__main__':
     argvs = sys.argv
-    if len(argvs) not in [2, 3]:
-        print("数値を1つ入力してください")
+    if not len(argvs) == 2:
+        print("素数かどうかを調べる数値を1つ入力してください。")
     else:
-        res = check_prime(argvs[1], argvs[2])
-        if res:
-            print("素数")
+        try:
+            is_prime = check_prime(argvs[1], METHOD_TYPE)
+
+            if is_prime:
+                print("素数です")
+            else:
+                print("素数じゃないです。")
+        except ValueError:
+            print("ERROR: 数値を入力してください")
