@@ -1,0 +1,22 @@
+いいですね！しっかり辞書ができてますね！
+
+`words.get` を使って簡潔に書いているのもGoodです！ （意味もちゃんと理解していると思ってます！）
+
+ただせっかく前回classを習ったので、これもクラス化してみましょうか。
+
+こんな感じで実装し、同様な結果となるようにしてみましょう！
+
+```
+# 単語数を数えるクラス
+class CountUpDict:
+    # TODO: インスタンス生成時にファイル名を渡しましょう
+    # TODO: wordsプロパティにて辞書の結果を返すようにしましょう
+    # TODO: wordsにて辞書の結果を返すが、インスタンス生成後にwordsに値を上書きできないようにしましょう
+    # TODO: Propertyの設定を、Propertyデコレータを使用した形で実現しましょう
+    # https://qiita.com/FGtatsuro/items/70a01fe98b9067746f74
+
+  
+if __name__ == '__main__':
+    d = CountUpDict('test.txt')
+    print(d.words)
+```
