@@ -3,12 +3,19 @@ import numpy as np
 
 
 def kuku():
-    for i in range(1, 10):
-        [i * multiplier for multiplier in range(1, 10)]
+    row = np.arange(1, 10)
+    col = np.arange(1, 10)[:, np.newaxis]
+    return row * col
 
 
-def 
+def vector(start, goal):
+    return np.linalg.norm(goal - start)
+
 
 if __name__ == '__main__':
-    d = CountUpDict('test.txt')
-    print(d.words)
+    ans = kuku()
+    print(ans)
+
+    p0 = np.array((1, 1))
+    p1 = np.array((6, 4))
+    print(vector(p0, p1))
