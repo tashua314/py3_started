@@ -7,7 +7,6 @@ class CountUpDict:
         self.__filepath = filepath
         self.__words = {}
         self.__make_dict()
-        print(dir(self))
 
     @property
     def words(self):
