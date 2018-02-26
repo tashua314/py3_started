@@ -7,7 +7,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 import matplotlib as mpl
-# mpl.use('Agg')
+mpl.use('Agg')
+
 
 
 # 終値情報を持つcsvから価格を得ます
@@ -17,7 +18,10 @@ def importData():
     data = np.array(btc_price)
     return data
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d22363d51c69b42b5981d32a7862cd5e2e201252
 data = np.array(importData())
 
 # ここでは15時間前までを見るものとします
