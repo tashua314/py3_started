@@ -10,7 +10,6 @@ import matplotlib as mpl
 mpl.use('Agg')
 
 
-
 # 終値情報を持つcsvから価格を得ます
 def importData():
     btc_price = pd.read_csv('coindesk-bpi-USD-close_data-2017-12-21_2017-12-22.csv')
@@ -18,10 +17,7 @@ def importData():
     data = np.array(btc_price)
     return data
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d22363d51c69b42b5981d32a7862cd5e2e201252
 data = np.array(importData())
 
 # ここでは15時間前までを見るものとします
