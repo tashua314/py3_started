@@ -1,0 +1,12 @@
+1行目の#!はshebangですね。
+書かなくてもいいですが、
+書いてあげると実行ファイルとして認識できるので、
+ちょっと嬉しいかもしれないですね。
+https://qiita.com/mohira/items/566ca75d704072bcb26f
+
+pyファイル単品で利用する場合はshebangを設定した方が嬉しいことも多いですが、
+webアプリとしてdjangoやflaskといったwebフレームワークと共に使う場合は明記しない事が多いですね。
+
+ちなみにpyファイルの頭ではshebang以外にも、codingを指定するのが一般的です。
+ただ、python3であれば記述が無い場合はutf-8と認識されるので、特に問題は無いです。
+https://hydrocul.github.io/wiki/programming_languages_diff/etc/magic-comment.html
