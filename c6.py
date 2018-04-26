@@ -28,5 +28,5 @@ if __name__ == '__main__':
         sys.exit(1)
     arr = rand_nums(int(argvs[1]), int(argvs[2]))
     m = average(arr)
-    print(arr)
-    print(m)
+    print('標本：' + str(arr))
+    print('平均値：' + str(m))
