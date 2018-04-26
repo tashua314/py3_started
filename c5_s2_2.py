@@ -13,7 +13,7 @@ def loop_print_prime(max):
         i = 3
         result = []
         while i <= max:
-            if is_prime(i, False):
+            if is_prime(i):
                 result.append(i)
             i = i + 2
         return result

@@ -7,7 +7,8 @@ import sys
 def devide(dividend, divisor):
     try:
         return int(dividend) / int(divisor)
-    except ZeroDivisionError:
+    except Exception as e:
+        print(e)
         return "infinite"
 
 
