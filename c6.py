@@ -23,7 +23,7 @@ def rand_nums(count, max_value):
 
 if __name__ == '__main__':
     argvs = sys.argv
-    if len(argvs) not in [3]:
+    if len(argvs) is not 3:
         print("標本数と乱数の最大値を入力してください")
         sys.exit(1)
     arr = rand_nums(int(argvs[1]), int(argvs[2]))
